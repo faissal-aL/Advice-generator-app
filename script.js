@@ -4,7 +4,6 @@ const generateAdvice = document.getElementById('generate-advice');
 
 
 function getApiAdvice(){
-    console.log('button is sclicked');
 const getAdvice = fetch("https://api.adviceslip.com/advice")
   .then((response) => response.json())
   .then((data) => {
@@ -13,10 +12,9 @@ const getAdvice = fetch("https://api.adviceslip.com/advice")
 
 const randomAdvice = () => {
     getAdvice.then((e) =>{
-        adviceNumber.innerHTML = "advice #" + e.id ;
+        if(Number(adviceNumber.innerHTML) == e.id) getApiAdvice();
+        adviceNumber.innerHTML = e.id ;
         advice.innerHTML = '"'+ e.advice + '"';
-        console.log('advice is',e.id);
-        console.log('advice text is',e.advice);
     });
 };
 randomAdvice();
