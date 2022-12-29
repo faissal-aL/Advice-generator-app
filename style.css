@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+/* font : Manrope  weight 800 */
+
+:root{
+    --font : Manrope;
+    /* Primary color  */
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    /* Neutral color  */
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--DarkBlue);
+}
+
+main{
+    position: relative;
+    background-color: var(--DarkGrayishBlue);
+    padding: 2em;
+    max-width: 500px;
+    width: 70%;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.521);
+    text-align: center;
+}
+h1{
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--NeonGreen);
+}
+
+p{
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    color: var(--LightCyan);
+}
+.divider{
+    margin-bottom: 2.5em;
+    width: 100%;
+}
+.mobile-divider{
+    display: none;
+}
+button{
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--NeonGreen);
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 35px var(--NeonGreen);
+}
+
+@media screen and (width<500px) {
+    .divider{
+        display: none;
+    }
+    .mobile-divider{
+        display: block;
+        margin-bottom: 2.5em;
+        width: 100%;
+    }
+}
